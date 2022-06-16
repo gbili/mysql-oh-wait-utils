@@ -1,0 +1,45 @@
+{
+  "name": "mysql-oh-wait-utils",
+  "version": "0.0.2",
+  "description": "generic loading and schema dumping for mysql-oh-wait using di-why",
+  "main": "build/src/index.js",
+  "types": "build/src/index.d.ts",
+  "scripts": {
+    "test": "tsc && NODE_ENV=test mocha --timeout 10000 --recursive ./build/test",
+    "start": "tsc && node ./build/index.js",
+    "serve": "tsc && NODE_ENV=production node ./build/index.js"
+  },
+  "bin": {
+    "db-undump": "NODE_ENV=npmscript ./build/bin/undumpSchema.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/gbili/mysql-oh-wait-utils.git"
+  },
+  "keywords": [],
+  "author": "Guillermo Pages <mail@guillermo.at> (https://guillermo.at)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/gbili/mysql-oh-wait-utils/issues"
+  },
+  "homepage": "https://github.com/gbili/mysql-oh-wait-utils#readme",
+  "devDependencies": {
+    "@types/chai": "4.2.9",
+    "@types/chai-as-promised": "^7.1.4",
+    "@types/mocha": "7.0.1",
+    "@types/node": "^13.7.1",
+    "chai": "4.2.0",
+    "chai-as-promised": "^7.1.1",
+    "mocha": "^9.1.3"
+  },
+  "directories": {
+    "test": "test"
+  },
+  "dependencies": {
+    "di-why": "^0.15.11",
+    "dotenv": "^16.0.1",
+    "mysql": "^2.18.1",
+    "mysql-oh-wait": "^0.15.0",
+    "swiss-army-knifey": "^0.7.1"
+  }
+}
