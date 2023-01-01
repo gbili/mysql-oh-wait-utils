@@ -1,6 +1,6 @@
 {
   "name": "mysql-oh-wait-utils",
-  "version": "0.0.2",
+  "version": "0.1.0",
   "description": "generic loading and schema dumping for mysql-oh-wait using di-why",
   "main": "build/src/index.js",
   "types": "build/src/index.d.ts",
@@ -27,6 +27,7 @@
     "@types/chai": "4.2.9",
     "@types/chai-as-promised": "^7.1.4",
     "@types/mocha": "7.0.1",
+    "@types/mysql": "^2.15.21",
     "@types/node": "^13.7.1",
     "chai": "4.2.0",
     "chai-as-promised": "^7.1.1",
@@ -39,7 +40,7 @@
     "di-why": "^0.15.11",
     "dotenv": "^16.0.1",
     "mysql": "^2.18.1",
-    "mysql-oh-wait": "^0.15.0",
+    "mysql-oh-wait": "^0.16.2",
     "swiss-army-knifey": "^0.7.1"
   }
 }
