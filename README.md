@@ -50,7 +50,7 @@ CREATE TABLE IF NOT EXISTS `User_Meta` (
 );
 ```
 
-## MysqlReq loader for di-why
+## MysqlReq loader for `di-why`
 
 From your usual `src/loaders/index.ts` you can import `MysqlReq`'s generic loader:
 
