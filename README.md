@@ -55,16 +55,22 @@ CREATE TABLE IF NOT EXISTS `User_Meta` (
 From your usual `src/loaders/index.ts` you can import `MysqlReq`'s generic loader:
 
 ```ts
-import { mysqlReqLoader } from 'mysql-oh-wait-utils';
+import { mysqlReqLoader, mysqlReqLoggerLoader } from 'mysql-oh-wait-utils';
 
 const loadDict = {
   mysqlReq: mysqlReqLoader,
+  // optionally pass granular loggers (keys: 'mysqlReqLogger' | 'mysqlMultipleReqLogger')
+  mysqlReqLogger: { instance: myLogger },
 };
 
 // logger can come from somwhere else
-const logger = new Logger({log: true, debug: true});
-
-const di = new DiContainer({ logger, load: injectionDict });
+const di = new DiContainer({ load: injectionDict });
 
 export default di;
 ```
+
+## Mysql undumpSchema
+
+You can set and `.env` var `PROJECT_ROOT_DIR_ABS_PATH`, it will try to load `${PROJECT_ROOT_DIR_ABS_PATH}/src/data/SCHEMA.sql`
+
+Otherwise it will use `node_modules` and try to figure out the root dir of the project.
