@@ -8,14 +8,7 @@ const loadDictElement: LoadDictElement<GetInstanceType<typeof MysqlReq>> = {
     const env = await serviceLocator.get('env');
     return {
       ...deps,
-      ...(serviceLocator.has('mysqlMultipleReqLogger')
-        ? { logger: await serviceLocator.get('mysqlMultipleReqLogger')}
-        : (
-          serviceLocator.has('mysqlReqLogger')
-          ? { logger: await serviceLocator.get('mysqlReqLogger')}
-          : {}
-        )
-      ),
+      ...(serviceLocator.couldLoad('mysqlReqLogger') ? { logger: await serviceLocator.get('mysqlReqLogger')} : {}),
       connectionConfig: {
         multipleStatements: false,
         ...MysqlReq.extractConfigFromEnv(env),
