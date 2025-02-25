@@ -1,4 +1,4 @@
-import { MysqlReq } from 'mysql-oh-wait';
+import { extractConfigFromEnv, MysqlReq } from 'mysql-oh-wait';
 import { LoadDictElement, GetInstanceType } from 'di-why/build/src/DiContainer';
 
 const loadDictElement: LoadDictElement<GetInstanceType<typeof MysqlReq>> = {
@@ -19,7 +19,4 @@ const loadDictElement: LoadDictElement<GetInstanceType<typeof MysqlReq>> = {
   },
 };
 export default loadDictElement;
-function extractConfigFromEnv(env: any): any {
-  throw new Error('Function not implemented.');
-}
 
