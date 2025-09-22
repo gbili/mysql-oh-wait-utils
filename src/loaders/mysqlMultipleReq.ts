@@ -1,7 +1,7 @@
 import { extractConfigFromEnv, MysqlReq } from 'mysql-oh-wait';
-import { LoadDictElement, GetInstanceType } from 'di-why/build/src/DiContainer';
+import { LoadDictElement } from 'di-why/build/src/DiContainer';
 
-const loadDictElement: LoadDictElement<GetInstanceType<typeof MysqlReq>> = {
+const loadDictElement: LoadDictElement<MysqlReq> = {
   before: async function ({ serviceLocator, deps }) {
     const env = await serviceLocator.get('env');
     return {
