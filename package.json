@@ -1,6 +1,6 @@
 {
   "name": "mysql-oh-wait-utils",
-  "version": "0.4.7",
+  "version": "0.4.8",
   "description": "generic loading and schema dumping for mysql-oh-wait using di-why",
   "main": "build/src/index.js",
   "types": "build/src/index.d.ts",
