@@ -5,8 +5,9 @@
   "main": "build/src/index.js",
   "types": "build/src/index.d.ts",
   "scripts": {
-    "test": "tsc && NODE_ENV=test mocha --timeout 10000 --recursive ./build/test",
-    "prepublish": "tsc"
+    "build": "tsc",
+    "prepublishOnly": "npm run build",
+    "test": "tsc && NODE_ENV=test mocha --timeout 10000 --recursive ./build/test"
   },
   "repository": {
     "type": "git",
@@ -20,20 +21,21 @@
   },
   "homepage": "https://github.com/gbili/mysql-oh-wait-utils#readme",
   "devDependencies": {
-    "@types/chai": "5.0.1",
-    "@types/chai-as-promised": "^8.0.1",
+    "@types/chai": "5.2.2",
+    "@types/chai-as-promised": "^8.0.2",
     "@types/mocha": "10.0.10",
-    "@types/mysql": "^2.15.26",
+    "@types/mysql": "^2.15.27",
     "@types/node": "^22.13.5",
-    "chai": "5.2.0",
-    "chai-as-promised": "^8.0.1",
-    "mocha": "^11.1.0"
+    "chai": "6.0.1",
+    "chai-as-promised": "^8.0.2",
+    "mocha": "^11.7.2"
   },
   "directories": {
     "test": "test"
   },
   "dependencies": {
-    "di-why": "^0.16.0",
-    "mysql-oh-wait": "^0.19.4"
+    "di-why": "^0.17.2",
+    "mysql-oh-wait": "^0.19.7",
+    "saylo": "^0.6.2"
   }
 }
