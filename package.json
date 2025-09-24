@@ -34,7 +34,7 @@
     "test": "test"
   },
   "dependencies": {
-    "di-why": "^0.18.0",
+    "di-why": "^0.20.0",
     "mysql-oh-wait": "^0.19.10",
     "saylo": "^0.6.2"
   }
